@@ -11,23 +11,33 @@
 <body>
 
     <header>
+
         <nav>
-            <p>Setup</p>
-            <ol>
-                <li>Google Chrome</li>
-                <li>Visual Studio Code</li>
-                <li>Figma</li>
-                <li>Github</li>
-            </ol>
-            <p>Conceptos esenciales del Desarrollo Web</p>
-            <ol>
-                <li>Que es HTML</li>
-                <li>Etiquetas</li>
-                <li>DOM</li>
-                <li>Semantica</li>
-                <li>Atributos</li>
-                <li>Que es CSS</li>
-            </ol>
+            <p>CONTENIDO</p>
+            <details>
+                <summary>
+                    Setup
+                </summary>
+                <ol>
+                    <li> <a href="#google-chrome">Google Chrome</a> </li>
+                    <li> <a href="#vsc">Visual Studio Code</a> </li>
+                    <li> <a href="#figma">Figma</a> </li>
+                    <li> <a href="#git">Github</a> </li>
+                </ol>
+            </details>
+            <details>
+                <summary>
+                    Conceptos esenciales del Desarrollo Web
+                </summary>
+                <ol>
+                    <li> <a href="#what-html">Que es HTML</a> </li>
+                    <li> <a href="#etiquetas">Etiquetas</a> </li>
+                    <li> <a href="#dom">DOM</a> </li>
+                    <li> <a href="#semantica">Semantica</a> </li>
+                    <li> <a href="#atributos">Atributos</a> </li>
+                    <li> <a href="#what-css">Que es CSS</a> </li>
+                </ol>
+            </details>
         </nav>
     </header>
     <hr>
@@ -37,14 +47,15 @@
         en el nivel 2 aprenderás de componentes y en 3 sobre layouts.</p>
 
     <h2>Setup</h2>
-    <img src="./images/google-chrome.png" alt="Logo de Google Chrome" title="Logo de Google Chrome">
+    <img src="./images/google-chrome.png" alt="Logo de Google Chrome" title="Logo de Google Chrome" id="google-chrome">
     <h3>Google Chrome</h3>
     <p>Chrome va a ser el navegador que utilizaremos en el curso por su
         extenso soporte de nuevos estándares y herramientas de desarrollo
         avanzadas y de amigable uso.</p>
 
 
-    <img src="./images/visual-studio-code.png" alt="Logo de Visual Studio Code" title="Logo de Visual Studio Code">
+    <img src="./images/visual-studio-code.png" alt="Logo de Visual Studio Code" title="Logo de Visual Studio Code"
+        id="vsc">
     <h3>Visul Studio Code</h3>
     <p>Visual Studio Code es el editor de texto más popular
         y potente del mercado actualmente, su fácil uso
@@ -56,14 +67,14 @@
 
 
 
-    <img src="./images/figma.png" alt="Logo de Figma" title="Logo de Figma">
+    <img src="./images/figma.png" alt="Logo de Figma" title="Logo de Figma" id="figma">
     <h3>Figma</h3>
     <p>Figma es una la herramienta más popular en la
         actualidad para entregar diseños a los desarrolladores
         para su implementación por su fácil uso porque puede
         ser usado directamente desde el navegador.</p>
 
-    <img src="./images/github.png" alt="Logo de Github" title="Logo de Github">
+    <img src="./images/github.png" alt="Logo de Github" title="Logo de Github" id="git">
     <p>Así como en Facebook te encuentran tus amigos,
         en Github te encuentran otras programadoras y programadores
         de todo el mundo, en vez de subir fotos de tus viajes aquí
@@ -74,14 +85,14 @@
     <hr>
 
     <h2>Conceptos esenciales del Desarrollo Web</h2>
-    <h3>Qué es HTML</h3>
+    <h3 id="what-html">Qué es HTML</h3>
     <p>
         Hyper Text Markup Language o Lenguaje de marcas Hipertexto.
         Es el componente más básico de la web. Define el significado
         y la estructura del contenido.
     </p>
 
-    <h2>Etiquetas</h2>
+    <h2 id="etiquetas">Etiquetas</h2>
     <p>Las etiquetas HTML van a ayudarnos a brindar una estructura
         y semántica al contenido de nuestro website y cada una tiene
         características y usos diferentes aunque visualmente den un
@@ -92,7 +103,7 @@
         pequeña idea de su uso pero en este curso vamos a usar las más importantes y que
         serán parte de tu día a día como Software Developer.</p>
 
-    <h2>DOM</h2>
+    <h2 id="dom">DOM</h2>
     <p>
         El Document Object Model es una estructura de árbol que representará
         todos nuestros proyectos web como si un árbol genealógico fuera:
@@ -102,7 +113,7 @@
     </p>
     <img src="./images/dom.png" alt="Imagen que respresenta el DOM Graficamente" title="Arbol DOM">
 
-    <h2>Semantica</h2>
+    <h2 id="semantica">Semantica</h2>
     <p>La semántica le brinda sentido a cada elemento existen en un sitio web,
         algunos elementos será meramente decorativos y no deben significar
         nada pero otros serán títulos y deberán estar en diferente jerarquías
@@ -112,13 +123,13 @@
         resultados de búsqueda SEO. También ayudará a la accesibilidad de tu sitio web,
         para que personas con habilidades diferentes puedan entender cada contenido.</p>
 
-    <h2>Atributos</h2>
+    <h2 id="atributos">Atributos</h2>
     <p>Los atributos le dan características extra a las etiquetas para complementar
         información y son pre programadas por el navegador, algunos atributos funcionan
         en todas las etiquetas de la misma forma como ‘class’ pero otros atributos
         funcionan en solo alguna etiquetas como src</p>
 
-    <h2>CSS</h2>
+    <h2 id="what-css">CSS</h2>
     <p>Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o
         CSS es el lenguaje de estilos utilizado para describir la presentación
         de documentos HTML</p>
@@ -158,6 +169,10 @@
             padding-inline-end</li>
     </ul>
 
+    <p>
+        Si tienes alguna pregunta escríbeme a
+        <a href="mailto:jhonf914@gmail.com">jhonf914@gmail.com</a>
+    </p>
 
 </body>
 
