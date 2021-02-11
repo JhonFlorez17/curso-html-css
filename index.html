@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Curso HTML y CSS</title>
 </head>
 
@@ -14,7 +15,7 @@
 
         <nav>
             <p>CONTENIDO</p>
-            <details>
+            <details open>
                 <summary>
                     Setup
                 </summary>
@@ -91,6 +92,20 @@
         Es el componente más básico de la web. Define el significado
         y la estructura del contenido.
     </p>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
 
     <h2 id="etiquetas">Etiquetas</h2>
     <p>Las etiquetas HTML van a ayudarnos a brindar una estructura
@@ -174,6 +189,18 @@
         <a href="mailto:jhonf914@gmail.com">jhonf914@gmail.com</a>
     </p>
 
+    <script>
+        const detailsList = document.querySelectorAll('details');
+        detailsList.forEach((details) => {
+            details.querySelector('summary').addEventListener('click', expand);
+        })
+
+        function expand() {
+            detailsList.forEach((details) => {
+                details.removeAttribute('open');
+            })
+        }
+    </script>
 </body>
 
 </html>
