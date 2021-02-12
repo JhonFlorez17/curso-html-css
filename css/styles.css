@@ -1,6 +1,57 @@
+:root{
+    font-size: 16px;
+}
+
+body{
+    color: #212121;
+}
+
+a{
+    color: #212121;
+}
+
+header{
+    font-size: 14px;
+    color: #616161;
+}
+
+header a {
+    color: #616161;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: #212121;
+}
+
+nav details summary {
+    font-weight: bold;
+}
+
+h1{
+    font-size: 60px;
+    /* font-size: 3.75em; */
+}
+
+h2{
+    font-size: 2em;/* 2 em equivaldria a 32 pixeles por que por defecto html tiene 16px de font-size y como
+    es relativo los em pues 2 * 16 nos da == 32px == 2em */
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 1em;
+}
+
+
 details[open] summary~* {
     animation: sweep 1s ease-in;
 }
+
+
 
 @keyframes sweep {
 
