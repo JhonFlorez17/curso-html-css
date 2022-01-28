@@ -1,0 +1,314 @@
+SETUP
+
+--GOOGLE CHROME
+--VISUAL STUDIO CODE
+--FIGMA
+
+
+---------------------------------------------------------------------------------------------
+
+ATAJOS
+
+--CONTROL+E o CONTROL+P == EXPLORADOR DE ARCHIVO
+--CONTROL+, == SETTINGS SE VISUAL STUDIO CODE
+--CONTROL+SHIFT+P ABRE MINI CONSOLA Y ESCRIBIENDO THEME Y LUEGO COLOR THEME 
+  PUEDE ESCOJER EL TEMA QUE QUIERA
+--CONTROL+SHIFT+X == VER LOS PLUGINS
+--CONTROL+N =NUEVO ARCHIVO
+
+
+---------------------------------------------------------------------------------------------
+
+INSTALAR FIGMA
+
+--PAGINA OFICIAL DE FIGMA SE LOGUEA NORMAL
+--https://www.figma.com/file/tV6G9X0P8DyRJSM77Xdp2r/Medium?node-id=0%3A1
+--DONDE PODEMOS VER TODO LO RELACIONADO CON EL DISEÑO Y PARA PODER PASARLO A CODIGO
+
+
+---------------------------------------------------------------------------------------------
+
+CREAR EL REPOSITORIO
+GITHUB
+
+--INICIAR SESION
+--CREAR NUEVO REPOSITORIO Y PONERLE EL NOMBRE https://github.com/new
+--Y SI QUEREMOS DE FORMA DE CONSOLA O GRAFICA
+--CREAR LA GITHUB PAGES
+--AÑADIR EL REPOSITITORIO CON LOS COMANDOS
+
+echo "# curso-html-css" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:Jhonf3312/curso-html-css.git
+git push -u origin main
+
+
+---------------------------------------------------------------------------------------------
+
+
+EXPORTAR ARCHIVOS DE FIGMA
+
+--PARA EXPORTAR DE FIGMA SE SELECCIONA EL ELEMENTO A EXPORTAR Y EN LA 
+  PARTE DERECHA APARECEN 2 VENTANAS INSPECT Y EXPORT LE DAMOS CLICK
+  A EXPORT Y ESCOJEMOS SI EN PNG,SVG,O EL FORMATO QUE QUERAMOS
+
+
+
+--------------------------------------------------------------------------------------
+
+ETIQUETAS HTML 
+
+SE CIERRAN SOLA --- <img/> <meta> no reciven el cierre 
+
+<h1></h1>--la etiqueta mas importante para resaltar el titulo de la pagina
+
+h1-tamaño mayor
+h6-tamaño menor
+
+
+-->> ETIQUETA <details> <summary></summary> </details> que nos ayuda a hacer un menu
+    desplegable solo con estas etiquetas de html
+
+-->> ETIQUETA PARA INSERTAR CODIGO  <code></code> es para insertar en un parrafo en una linea
+    una parte de CODIGO
+
+-->> ETIQUETA <pre></pre> Para Insertar lineas de codigo pero en bloque en un parte que no es 
+      un parrofo si no una etiqueta independiente pero para poner codigo HTML toca escapar el codigo 
+      para que no sea leido como tal html si no como texto 
+
+      https://www.freeformatter.com/html-escape.html
+
+      
+
+
+
+
+--------------------------------------------------------------------------------------
+
+ATRIBUTOS
+
+--Colocar el nombre de las imagenes en minuscula y si hay espacios
+  separarlos con un guion
+
+ 
+-----------------------------------------------------------------------------------------
+
+LISTAS ORDENADAS Y DESORDENADAS
+
+UL Y OL 
+
+UL -> SON LISTAS -DESORDENADAS
+OL -> SON LISTAS - ORDENADAS
+
+
+-----------------------------------------------------------------------------------------
+
+LINKS
+
+RUTAS
+
+./images/logo-chrome  -> esta ruta es relativa quiere decir que es un direccion especifica
+images/logo-chrome ->  hace lo mismo que la anterior una direccion especifica 
+/images/logo-chrome -> y solo con un slash al principio y luego la ruta hace que busque como tal en el
+                      servidor total la carpeta 
+
+--> etiqueta <a> es un link  --> atributos * target="_blank"
+      etiqueta a puede ir dentro de un (li) para una navegacion por medio e href
+      que lleve a alguna seccion de la pagina
+
+                <li> <a href="#google-chrome">Google Chrome</a> </li>
+                <li> <a href="#vsc">Visual Studio Code</a> </li>
+                <li> <a href="#figma">Figma</a> </li>
+                <li> <a href="#git">Github</a> </li>
+
+
+--> etiqueta <a> pueder tener como href una ruta en la que podemos colocar un correo
+      y nos diriga a enviar el correo directamente 
+
+      <a href="mailto:jhonf914@gmail.com">jhonf914@gmail.com</a>
+
+
+--------------------------------------------------------------------------------------------
+
+CSS 
+
+
+TRES FORMAS DE AGREGAR CSS
+-ATRIBUTO DE ETIQUETA
+-ETIQUETA STYLE
+-ARCHIVO EXTERNO .CSS
+
+-->> CASCADA -> en esta opcion como la hoja de estilos en cascada cada vez que leee
+                una linea sobreescribe la linea de codigo en el ejmplo el color seria 
+                naranja 
+
+  .title{
+    color:red;
+  }
+
+  .title{
+    color: orange 
+  }
+
+
+
+
+
+-->> EL ID ES SUPERIOR A LA CLASE EN CSS TIENE MAS ESPECIFIDAD EL ID QUE LA CLASE
+
+1.#ID
+2.CLASE
+3.ETIQUETA
+
+
+-->> entre mas especifico mas relevancia en el css
+-->> el important sobreecribe todo es mayor que todo los selectores
+
+
+
+-->DISPLAY  EXITEN TRES EL FLOWLAYOUR  --FLEX -- GRID
+
+
+HTML -> CONTENIDO
+FLEXBOX -> COMPONETES Y LAYOUT
+GRID -> LAYOUT Y COMPNENTES
+
+
+PROPIEDADES DEL DISPLAY POR DEFECTO EN ALGUNAS ETIQUETAS
+
+EL block  y el inline
+
+
+-->> EL BLOCK LO TRAEN POR DEFECTO ALGUNAS ETIQUETAS COMO EL H2,P, Y MAS
+      Y ESTA PORPIEDAD DEL DISPLAY DE CSS NOS INDICA QUE ES UN BLOQUE 
+      OSEA QUE SI NO SOTROS AGREMAOS OTRA ETIQUETA DEBAJO  CLARAMENTE VA A QUEDAR
+      DEBAJO DE LA ETIQUETA ANTERIOR DEPENDIENDO DE QUE DISPLAY TENGA POR DEFECTO
+  EJEMPLO: quedan los textos uno debajo del otro porque tiene por defecto la PORPIEDAD
+            display:block;
+
+    <h2>Hola mundo</h2>
+    <p>Como esta</p>
+    <h3>Muy bien </h3>
+
+
+
+-->> Y EL INLINE LO TRAE POR DEFECTO LA ETIQUETA IMAGEN YA QUE AL COLOCAR VARIAS
+    IMAGENES SEGUIDAD ESTAS VAN A QUEDAR UNA AL LADO DE LA OTRA POR QUE VIENE POR DEFECTO
+    CON LA ETIQUETA DISPLAY: inline; QUE NOS DEJA TODO EN UNA SOLA LINEA 
+  EJEMPLO: quedan las imagenes seguidas en una sola lineas
+
+  <img src="" alt="">
+  <img src="" alt="">
+  <img src="" alt="">
+  <img src="" alt="">
+
+
+-->> Y SI UNA ETIQUETA DE IMAGEN QUE ENTRE ETIQUETAS DE BLOCK QUEDA TOTALMENTE BLOQUEDAD A
+      A MENOS QUE HALLA OTRA ETIQUETA QUE TRAIGA POR DEFECTO INLINE DENTRO DEL BLOQUE 
+  EJEMPLO: queda la imagen dentro de un bloque
+
+    <h1>Hola mundo</h1>
+    <img src="" alt="">
+    <p>Hola Mundo parrafo</p>
+
+-->> FLOWLAYOUT
+
+obedece a la configuracion de writting-mode y direction
+
+writting-mode:horizontal-tb
+direction:ltr
+
+
+-->> writting-mode 
+
+horizontal-tb : significa el flujo con el que nosotros vemos la pagina 
+                osea la leemos de arriba hacia abajo (tb = top y button)
+                y horitzontal (<----> hroizontal) de hay el significado de 
+                esta PORPIEDAD
+
+direction  significa la direccion con la que leemos la pagina osea en nuestro idioma
+            es de izquierda a derecha por el valor que toma direcition es (ltr --> left to right)
+
+
+UNIDADES RELATIVAS Y ABSOLUTAS px, em , vw px, em, rem y vw
+
+-- Si coloco en el body una font size especifico en px y las demas 
+etiquetas con unidades relativas estas unidades seran herencia de la del body
+
+body {
+  font-size:10px
+}
+
+h1{
+  font-size:4em;
+}
+
+las lineas anteriores quiere decir que el body en general tiene como 
+base 10px y al colocar el font size del h1 en em quiere decir que se multiplica 
+esos 4 em por el font-size base esto quiere decir que el font-size de h1 sera 40px
+
+
+--el vw nos representa el width que nosotros queremos colocar 
+
+header{
+  width:800px 
+}
+
+esta linea es para que el header tenga un ancho de 800px siempre tendra
+ese ancho de modo que si ponemoa version movil se va a generar un scroll
+hortizontal por que siempre tendra 800px en cambio si utilizamos las unidad
+relativa vw
+
+header{
+  width:80% 
+}
+ esta linea nos dice que va a ocupar el 80% del width de la pantalla en la 
+ que se visualice de modo que en cualquier dispositivo el solo ocuparel 80%
+ del ancho y si lo pasamos a movil el ocupara solo un 80% de la pantalla 
+ haciendo uso de las unidades relativas
+
+
+CUSTOM PROPERTIES
+
+crear variables para reutilizar el codigo y se vea con una mejor
+arquitectura
+
+como se define la variables:
+
+:root {
+  font-size: 16px;
+  --gray30: #212121;
+  --gray10: #616161;
+}
+
+como se utiliza :
+
+header{
+  color:var(--gray30)
+}
+
+
+FUENTES PERSONALISADAS
+
+sintaxis 
+
+@font-face {
+    font-family: ;
+    src: url();
+}
+
+y se utiliza 
+
+header{
+  font-family: nombre;
+}
+
+
+
+
+
+
+

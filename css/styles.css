@@ -1,67 +1,63 @@
-:root{
-    font-size: 16px;
+:root {
+  font-size: 16px;
+  --gray30: #212121;
+  --gray10: #616161;
 }
 
-body{
-    color: #212121;
+body {
+  color: var(--gray30);
 }
 
-a{
-    color: #212121;
+a {
+  color: var(--gray30);
 }
 
-header{
-    font-size: 14px;
-    color: #616161;
+header {
+  font-size: 14px;
+  color: var(--gray10);
 }
 
 header a {
-    color: #616161;
-    text-decoration: none;
+  color: var(--gray10);
+  text-decoration: none;
 }
 
-header a:hover{
-    color: #212121;
+header a:hover {
+  color: var(--gray30);
 }
 
 nav details summary {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-h1{
-    font-size: 60px;
-    /* font-size: 3.75em; */
+h1 {
+  font-size: 60px;
+  /* font-size: 3.75em; */
 }
 
-h2{
-    font-size: 2em;/* 2 em equivaldria a 32 pixeles por que por defecto html tiene 16px de font-size y como
+h2 {
+  font-size: 2em; /* 2 em equivaldria a 32 pixeles por que por defecto html tiene 16px de font-size y como
     es relativo los em pues 2 * 16 nos da == 32px == 2em */
 }
 
-h3{
-    font-size: 24px;
+h3 {
+  font-size: 24px;
 }
 
-p{
-    font-size: 1em;
+p {
+  font-size: 1em;
 }
 
-
-details[open] summary~* {
-    animation: sweep 1s ease-in;
+details[open] summary ~ * {
+  animation: sweep 1s ease-in;
 }
-
-
 
 @keyframes sweep {
+  0% {
+    opacity: 0;
+  }
 
-    0% {
-        opacity: 0;
-
-    }
-
-    100% {
-        opacity: 1;
-
-    }
+  100% {
+    opacity: 1;
+  }
 }
