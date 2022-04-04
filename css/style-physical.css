@@ -1,0 +1,195 @@
+:root {
+  font-size: 16px;
+  --gray30: #212121;
+  --gray20: #424242;
+  --gray10: #616161;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: var(--gray30);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+a {
+  color: var(--gray30);
+}
+
+header {
+  font-size: 14px;
+  color: var(--gray10);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 208px;
+  left: -232px;
+  top: 64px;
+}
+
+header a {
+  color: var(--gray10);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--gray30);
+}
+header li {
+  margin-bottom: 16px;
+}
+nav details summary {
+  font-weight: bold;
+  line-height: 24px;
+}
+
+h1 {
+  font-size: 60px;
+  /* font-size: 3.75em; */
+  margin: 64px 0 16px 0;
+}
+
+/* Genera margin collapsin con el hr */
+/* h1 + p {
+  margin-bottom: 64px;
+} */
+
+h2 {
+  font-size: 2em; /* 2 em equivaldria a 32 pixeles por que por defecto html tiene 16px de font-size y como
+    es relativo los em pues 2 * 16 nos da == 32px == 2em */
+  margin: 40px 0;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 16px 0 24px 0;
+  font-weight: normal;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+p {
+  font-size: 1em;
+}
+
+hr {
+  margin: 64px 0;
+}
+
+details[open] summary ~ * {
+  animation: sweep 1s ease-in;
+}
+
+.hero {
+  /* background: red; */
+  /* background: url("../images/patron-1.png"); */
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    ),
+    url("../images/patron-1.png");
+  /*background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover; */
+  height: 350px;
+}
+
+pre {
+  background-color: #fec62e;
+  padding: 40px 350px 40px 40px;
+  font-family: "Roboto";
+  line-height: 24px;
+}
+
+blockquote {
+  margin: 32px 0;
+  padding-left: 16px;
+  font-size: 24px;
+  border-left: 4px var(--gray30) solid;
+}
+
+blockquote p:first-child {
+  color: var(--gray20);
+}
+
+blockquote p span {
+  color: var(--gray10);
+}
+
+blockquote p span::before {
+  content: "-";
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.section-content {
+  margin-top: 164px;
+}
+
+.section-content:first-of-type {
+  margin: 0;
+}
+.section-content ol li {
+  line-height: 24px;
+}
+
+.section-content ul li {
+  margin-bottom: 16px;
+}
+.section-content img {
+  margin-top: 40px;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+.section-content h3 {
+  counter-increment: titleList;
+  padding-bottom: 8px;
+}
+
+.section-content h3::after {
+  content: "";
+  height: 4px;
+  width: 80px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.section-content h3::before {
+  content: counter(titleList) ". ";
+}
+
+.header-content {
+  position: relative;
+}
+.main {
+  /*   background: red; */
+}
+
+.wrapper {
+  width: 912px;
+  margin: auto;
+}
+
+.main-content {
+  /* background-color: blue; */
+  /* padding: 20px; */
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}

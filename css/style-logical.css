@@ -6,6 +6,7 @@
 
 body {
   color: var(--gray30);
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -52,6 +53,25 @@ details[open] summary ~ * {
   animation: sweep 1s ease-in;
 }
 
+.hero {
+  /* background: red; */
+  /* background: url("../images/patron-1.png"); */
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    ),
+    url("../images/patron-1.png");
+  /*background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover; */
+  height: 350px;
+}
+
+pre {
+  background-color: #fec62e;
+}
+
 @keyframes sweep {
   0% {
     opacity: 0;
@@ -60,4 +80,23 @@ details[open] summary ~ * {
   100% {
     opacity: 1;
   }
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::after {
+  content: "";
+  height: 4px;
+  width: 228px;
+  background-color: red;
+  display: block;
+}
+
+.section-content h3::before {
+  content: counter(titleList) ". ";
 }

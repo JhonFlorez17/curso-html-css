@@ -252,6 +252,7 @@ esos 4 em por el font-size base esto quiere decir que el font-size de h1 sera 40
 
 
 --el vw nos representa el width que nosotros queremos colocar 
+--en vw siempre va a ocupar lo que se le indique 
 
 header{
   width:800px 
@@ -270,6 +271,8 @@ header{
  del ancho y si lo pasamos a movil el ocupara solo un 80% de la pantalla 
  haciendo uso de las unidades relativas
 
+-el rem siempre va a tomar el tamaño del padre ya sea root: o html 
+-no iria en cascada como los em
 
 CUSTOM PROPERTIES
 
@@ -292,7 +295,7 @@ header{
 
 
 FUENTES PERSONALISADAS
-
+si tengo una fuente en mi carpeta de la pagina web estes es la sintaxis
 sintaxis 
 
 @font-face {
@@ -308,7 +311,155 @@ header{
 
 
 
+IMPORTAR FUENTES GOOGLE FONTS
+
+se escoge primero las fuentes a importar de la pagina de google fonts y luesgo 
+la pagina tiene una opcion para exportar de dos modos la de link y la de import para 
+el css
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+header{
+  font-family: "Roboto", sans-serif;
+}
+
+BACKGROUND
+
+.hero {
+  /* background: red; */
+  /* background: url("../images/patron-1.png"); */
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    ),
+    url("../images/patron-1.png");
+  /*background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover; */
+  height: 350px;
+}
 
 
 
+PSEUDOELEMETOS
 
+::after  :: before
+
+
+::selection{
+  background:red;
+}
+
+h3::after {
+  content: "";
+  height: 4px;
+  width: 228px;
+  background-color: red;
+  display: block;
+}
+
+
+CONTADORES CSS
+
+h3 {
+  font-size: 24px;
+  counter-increment: titleList;
+}
+
+h3::before {
+  content: counter(titleList);
+}
+
+MODELO DE CAJA
+
+margin
+padding
+width 
+height 
+border
+
+VALORES LOGICOS Y FISICOS
+
+ANTES VALOR FISICO
+
+text-aling: right 
+
+AHORA VALOR LOGICO
+
+text-aling : end 
+
+
+BOX SIZINNG
+
+cuando le damos tamaño en especifico y queremos que
+ese tamaño sea asi y no se incremente que tenga el mismovalor siempre 
+
+EJEMPLO
+
+h3{
+  width:200px
+  padding:20px
+  border:1px solid red
+}
+
+en este caso el width por mas que este definido 
+no sera 200 ya que se le incrementa lo que es el paddinf y el border 
+tomando un valor 242 de ancho 
+
+entonces para solucionar estos utilizamos el 
+box sizing para que mantenga el valor definido osea 200px
+
+h3{
+  width:200px
+  padding:20px
+  border:1px solid red
+  box-sizing: border-box
+}
+
+
+POSITION
+
+relative -activa
+mover elemento sin que el espaciosfisico se altere
+-top
+-left
+-bottom
+-right
+-z-index
+
+absolute
+se ubica de manera donde le toca 
+y se pone encima de otras cosas
+se activan el 
+
+-top
+-left
+-bottom
+-right
+
+peros si les damos valor es 
+con la posicion de lapagina
+
+ejemplo si le damos top:0 
+nos aparecera al principio de la pagina 
+
+
+fixed
+
+se fija en el view
+
+
+sticky
+ocupa todo el ancho requiere ser relativo a algo
+requiere ser relativo a algo
+
+
+si tenemos posicion absoluta dentro de una caja
+para que no se nos deborde de esa caja 
+debemos porne esa caja en position relative 
+para que asi lo que tenemos en posicion absoluta sea 
+relativo a la caja 
