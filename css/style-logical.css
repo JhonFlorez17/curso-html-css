@@ -16,27 +16,21 @@ body {
   margin: 0;
 }
 
-header li {
+header li,
+ol li {
   color: var(--gray20);
   margin-block-end: 16px;
 }
 
-.header {
-  position: sticky;
-  inset-block-start: -45px;
+/* .header {
 }
 .header-content {
-  position: relative;
-  inset-block-start: 65px;
 }
-
+ */
 header {
   font-size: 14px;
   color: var(--blanco);
-  position: absolute;
-  inset-block-start: 0px;
-  inset-inline-start: -208px;
-  inline-size: 188px;
+  margin-block-start: 20px;
 }
 
 header a {
@@ -59,8 +53,8 @@ hr {
 }
 
 h1 {
-  font-size: 60px;
-  margin-block-start: 64px;
+  font-size: 40px;
+  margin-block-start: 24px;
   margin-block-end: 16px;
   font-weight: 700;
   /* font-size: 3.75em; */
@@ -69,6 +63,8 @@ h1 {
 h2 {
   font-size: 2em; /* 2 em equivaldria a 32 pixeles por que por defecto html tiene 16px de font-size y como
     es relativo los em pues 2 * 16 nos da == 32px == 2em */
+  margin-block-start: 63px;
+  margin-block-end: 40px;
 }
 
 h3 {
@@ -76,10 +72,17 @@ h3 {
   font-weight: 600;
   margin-block: 16px;
 }
+#dom,
+#semantica,
+#atributos,
+#what-css {
+  margin-block-start: 40px;
+}
 
 p {
-  font-size: 1em;
+  font-size: 1.06em;
   color: var(--gray20);
+  line-height: 24px;
 }
 
 details[open] summary ~ * {
@@ -94,7 +97,7 @@ details[open] summary ~ * {
   /*background-repeat: no-repeat;
   background-position: left top;
   background-size: cover; */
-  height: 350px;
+  height: 150px;
 }
 
 pre {
@@ -108,7 +111,7 @@ pre {
   border: 8px solid #5551ff;
   /*  box-shadow: inset 8px 8px gold; */
   box-shadow: -10px 10px 0px 0px #87a6e3;
-  margin-block-end: 30px;
+  margin-block-end: 40px;
 }
 
 @keyframes sweep {
@@ -180,7 +183,8 @@ blockquote p {
   margin: auto;
 }
 
-.main-content {
+.main-content,
+.header-content {
   padding-inline: 16px;
 }
 
@@ -218,4 +222,78 @@ blockquote p {
   block-size: 15px;
   display: inline-block;
   border-radius: 50%;
+  margin-inline-start: 8px;
+}
+
+ul li {
+  margin-block-start: 16px;
+}
+
+#slider {
+  font-size: 24px;
+  color: var(--blanco);
+  margin-block-start: 40px;
+}
+
+.form input {
+  inline-size: 100%;
+  border: 1px solid var(--blanco);
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #251f24;
+  padding-block-start: 12px;
+  padding-block-end: 12px;
+  padding-inline-start: 16px;
+  margin-block-start: 24px;
+  font-size: 16px;
+  color: white;
+}
+
+.form h2 {
+  margin-block-start: 40px;
+  margin-block-end: 16px;
+  display: inline;
+}
+
+.form button {
+  inline-size: 100%;
+  margin-block-start: 24px;
+  background: #157efb;
+  border-radius: 8px;
+  padding-block: 12px;
+  padding-inline: 16px;
+  border: none;
+  color: var(--blanco);
+  font-size: 1em;
+  font-family: "Nunito";
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1366px) {
+  .header {
+    position: sticky;
+    inset-block-start: -45px;
+  }
+  .header-content {
+    position: relative;
+    inset-block-start: 50px;
+    padding: 0;
+  }
+
+  header {
+    font-size: 14px;
+    color: var(--blanco);
+    position: absolute;
+    inset-block-start: 0px;
+    inset-inline-start: -208px;
+    inline-size: 188px;
+  }
+  .hero {
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
 }
