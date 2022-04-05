@@ -1,38 +1,68 @@
 :root {
   font-size: 16px;
   --gray30: #212121;
-  --gray10: #616161;
+  --gray20: #a5a3a5;
+  --gray10: #3a3539;
+  --blanco: white;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--gray30);
-  font-family: "Roboto", sans-serif;
+  color: var(--blanco);
+  font-family: "Nunito", sans-serif;
+  margin: 0;
 }
 
-a {
-  color: var(--gray30);
+header li {
+  color: var(--gray20);
+  margin-block-end: 16px;
+}
+
+.header {
+  position: sticky;
+  inset-block-start: -45px;
+}
+.header-content {
+  position: relative;
+  inset-block-start: 65px;
 }
 
 header {
   font-size: 14px;
-  color: var(--gray10);
+  color: var(--blanco);
+  position: absolute;
+  inset-block-start: 0px;
+  inset-inline-start: -208px;
+  inline-size: 188px;
 }
 
 header a {
-  color: var(--gray10);
+  color: var(--gray20);
   text-decoration: none;
 }
 
 header a:hover {
-  color: var(--gray30);
+  color: var(--blanco);
 }
 
 nav details summary {
   font-weight: bold;
+  line-height: 24px;
+}
+
+hr {
+  margin-block: 40px;
+  border: 1px solid rgba(97, 97, 97, 0.2);
 }
 
 h1 {
   font-size: 60px;
+  margin-block-start: 64px;
+  margin-block-end: 16px;
+  font-weight: 700;
   /* font-size: 3.75em; */
 }
 
@@ -43,10 +73,13 @@ h2 {
 
 h3 {
   font-size: 24px;
+  font-weight: 600;
+  margin-block: 16px;
 }
 
 p {
   font-size: 1em;
+  color: var(--gray20);
 }
 
 details[open] summary ~ * {
@@ -56,12 +89,8 @@ details[open] summary ~ * {
 .hero {
   /* background: red; */
   /* background: url("../images/patron-1.png"); */
-  background-image: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.3),
-      transparent
-    ),
-    url("../images/patron-1.png");
+  background: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
+
   /*background-repeat: no-repeat;
   background-position: left top;
   background-size: cover; */
@@ -69,7 +98,17 @@ details[open] summary ~ * {
 }
 
 pre {
-  background-color: #fec62e;
+  background-color: var(--gray10);
+  padding-block-start: 40px;
+  padding-block-end: 40px;
+  padding-inline-end: 85px;
+  padding-inline-start: 40px;
+  line-height: 24px;
+  border-radius: 8px;
+  border: 8px solid #5551ff;
+  /*  box-shadow: inset 8px 8px gold; */
+  box-shadow: -10px 10px 0px 0px #87a6e3;
+  margin-block-end: 30px;
 }
 
 @keyframes sweep {
@@ -88,15 +127,95 @@ pre {
 .section-content h3 {
   counter-increment: titleList;
 }
-
+/* 
 .section-content h3::after {
   content: "";
   height: 4px;
   width: 228px;
   background-color: red;
-  display: block;
-}
+  display: inline-block;
+} */
 
 .section-content h3::before {
   content: counter(titleList) ". ";
+}
+
+body {
+  background-color: #251f24;
+}
+
+.section-content:nth-of-type(1) img {
+  margin-block-start: 40px;
+  display: block;
+}
+
+.section-content img {
+  max-inline-size: 100%;
+}
+
+blockquote {
+  background-color: var(--gray10);
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  border-radius: 8px;
+  padding-inline-end: 17px;
+  padding-inline-start: 24px;
+  padding-block-start: 24px;
+  padding-block-end: 24px;
+  line-height: 32px;
+  font-size: 22px;
+  margin-inline: 0px;
+  font-weight: 400;
+}
+
+blockquote p {
+  color: var(--blanco);
+}
+
+.main {
+}
+
+.wrapper {
+  max-inline-size: 636px;
+  margin: auto;
+}
+
+.main-content {
+  padding-inline: 16px;
+}
+
+.slider {
+}
+
+.slider-container {
+  /*   block-size: 100px; */
+  /* este elemento viene por defecto display inline y no podemos
+  ponerle un ancho un alto */
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  overflow-x: hidden;
+  font-size: 0;
+}
+
+.slider-slide iframe {
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  margin-block-start: 16px;
+  text-align: center;
+}
+
+.slider-bullet-list a {
+  background-color: white;
+  inline-size: 15px;
+  block-size: 15px;
+  display: inline-block;
+  border-radius: 50%;
 }

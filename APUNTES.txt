@@ -463,3 +463,71 @@ para que no se nos deborde de esa caja
 debemos porne esa caja en position relative 
 para que asi lo que tenemos en posicion absoluta sea 
 relativo a la caja 
+
+
+VALORES LOGICOS 
+
+FISICO 
+
+margin: 100px afecta todas la coordenadas top right bottom left
+padding
+
+LOGICO
+
+margin-inline:100px
+margin-block :100px
+margin-block-start:50px;
+margin-block-end:50px
+
+padding-inline
+
+
+FISICO
+
+width
+height
+max-width
+
+LOGICO
+
+inline-size
+block-size
+max-inline-size
+
+
+
+FISICO 
+
+border
+border-start-start-radius
+
+LOGICO
+
+border-inline-start
+border-inline-end
+border-block
+
+
+VALORES LOGICOS POSITION
+
+FISICO
+
+top
+buttom
+left
+right
+
+LOGICO
+
+inset-block-start
+inset-block-end
+inset-inline-end
+inset-inline-start
+
+inset:0; se expande todo el div si se le define
+un ancho y alto y position absolute
+
+
+ text-aling: end;
+ text-aling: start;
+ text-aling: justify;
